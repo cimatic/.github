@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1240" height="380" viewBox="0 0 1240 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+  <title id="title">Cimatic CI Vitals Dashboard</title>
+  <desc id="desc">Dashboard showing three CI Vitals metrics: WET, NFR, and POT with hard shadows and bold borders matching Cimatic's design system</desc>
+  
+  <defs>
+    <!-- Dot pattern background -->
+    <pattern id="dotPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="10" cy="10" r="1" fill="#E5E7EB" opacity="0.5"/>
+    </pattern>
+    
+    <style>
+      .subtitle-text { font: 600 18px "Inter", sans-serif; fill: #374151; }
+      .metric-label { font: 700 16px "Inter", sans-serif; fill: #374151; }
+      .metric-value { font: 800 32px "Inter", sans-serif; }
+      .metric-desc { font: 500 14px "Inter", sans-serif; fill: #6B7280; }
+    </style>
+  </defs>
+
+  <!-- Background with dot pattern -->
+  <rect width="1240" height="380" fill="#F9FAFB"/>
+  <rect width="1240" height="380" fill="url(#dotPattern)"/>
+
+  <!-- Main container with hard shadow -->
+  <g>
+    <!-- Shadow -->
+    <rect x="84" y="44" width="1072" height="292" rx="0" fill="#000000"/>
+    <!-- Main card -->
+    <rect x="80" y="40" width="1072" height="292" rx="0" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  </g>
+
+  <!-- Dashboard Title -->
+  <text class="subtitle-text" x="120" y="80">CI Vitals Dashboard</text>
+
+  <!-- WET Card -->
+  <g transform="translate(120, 120)">
+    <!-- Shadow -->
+    <rect x="4" y="4" width="280" height="180" fill="#000000"/>
+    <!-- Card -->
+    <rect width="280" height="180" fill="#F3F4F6" stroke="#000000" stroke-width="2"/>
+    
+    <!-- Icon -->
+    <g transform="translate(20, 20)">
+      <circle cx="20" cy="20" r="18" fill="#10B981" stroke="#000000" stroke-width="2"/>
+      <path d="M20 12v6l4 4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="20" cy="20" r="2" fill="#FFFFFF"/>
+    </g>
+    
+    <text class="metric-label" x="20" y="80">WET</text>
+    <text class="metric-desc" x="20" y="100">(Workflow Execution Time)</text>
+    <text class="metric-value" x="20" y="135" fill="#10B981">6m 42s</text>
+    <text class="metric-desc" x="20" y="155">p75 build time</text>
+  </g>
+
+  <!-- NFR Card -->
+  <g transform="translate(440, 120)">
+    <!-- Shadow -->
+    <rect x="4" y="4" width="280" height="180" fill="#000000"/>
+    <!-- Card -->
+    <rect width="280" height="180" fill="#F3F4F6" stroke="#000000" stroke-width="2"/>
+    
+    <!-- Icon -->
+    <g transform="translate(20, 20)">
+      <rect x="2" y="2" width="36" height="36" rx="18" fill="#3B82F6" stroke="#000000" stroke-width="2"/>
+      <path d="M12 20l2 2 4-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <text class="metric-label" x="20" y="80">NFR</text>
+    <text class="metric-desc" x="20" y="100">(Noise-to-Fix Ratio)</text>
+    <text class="metric-value" x="20" y="135" fill="#3B82F6">22%</text>
+    <text class="metric-desc" x="20" y="155">infrastructure noise</text>
+  </g>
+
+  <!-- POT Card -->
+  <g transform="translate(760, 120)">
+    <!-- Shadow -->
+    <rect x="4" y="4" width="280" height="180" fill="#000000"/>
+    <!-- Card -->
+    <rect width="280" height="180" fill="#F3F4F6" stroke="#000000" stroke-width="2"/>
+    
+    <!-- Icon -->
+    <g transform="translate(20, 20)">
+      <rect x="2" y="2" width="36" height="36" rx="18" fill="#F59E0B" stroke="#000000" stroke-width="2"/>
+      <path d="M8 12h8M12 8v8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    
+    <text class="metric-label" x="20" y="80">POT</text>
+    <text class="metric-desc" x="20" y="100">(Pipeline Overhead Time)</text>
+    <text class="metric-value" x="20" y="135" fill="#F59E0B">1m 18s</text>
+    <text class="metric-desc" x="20" y="155">wasted per build</text>
+  </g>
+</svg>
